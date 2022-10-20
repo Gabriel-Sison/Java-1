@@ -1,0 +1,46 @@
+import java.util.*; // For Scanner
+
+public class Exercise03_21 {
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in); // Create Scanner
+	
+	System.out.print("Enter year: (e.g., 2012): "); // Get Year
+	int year = input.nextInt();
+	
+	System.out.print("Enter month: 1-12: "); // Get Month
+	int month = input.nextInt();
+	
+	if (month == 1) { // if Month is January, make it count from the previous year
+		month = 13;
+		year -= 1;
+	}
+	
+	if (month == 2) { // if Month is February, make it count from the previous year
+		month = 14;
+		year -= 1;
+	}
+	
+	System.out.print("Enter the day of the month: 1-31: "); // Get day of the month
+	int day = input.nextInt();
+	
+	int dayOfWeek = (day + 26 * (month + 1) / 10 + (year % 100) + (year % 100) / 4 + (year/ 100) /4 + 5 * (year / 100)) % 7; // Calculate day of the week
+	
+	String nameOfDay = " "; // Use dayOfWeek to get the name of the day
+	if (dayOfWeek == 0)
+		nameOfDay = "Saturday";
+	else if (dayOfWeek == 1)
+		nameOfDay = "Sunday";	
+	else if (dayOfWeek == 2)
+			nameOfDay = "Monday";	
+	else if (dayOfWeek == 3)
+			nameOfDay = "Tuesday";
+	else if (dayOfWeek == 4)
+		nameOfDay = "Wednesday";
+	else if (dayOfWeek == 5)
+		nameOfDay = "Thursday";
+	else if (dayOfWeek == 6)
+		nameOfDay = "Friday";
+	
+	System.out.print("Day of the week is " + nameOfDay); // Print it out
+}
+}
