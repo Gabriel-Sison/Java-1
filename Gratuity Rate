@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Exercise02_05 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the subtotal and a gratuity rate: ");
+        
+        int dollars = input.nextInt();
+        int gratuity_rate = input.nextInt();
+        
+        double gratuity_dollars = 0.01 * gratuity_rate * dollars;
+        double total = dollars + gratuity_dollars;
+        
+        System.out.println("The gratuity is $" + gratuity_dollars + " and total is $" + total);
+    }
+}
