@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class Exercise03_22 {
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	
+	int dayInMonth = 0; // Why does my program only work when I initialize these numbers, even though I will assign them to something later
+	String monthName = " ";
+	
+	System.out.print("Enter a month in the year (e.g., 1 for Jan): ");
+	int month = input.nextInt();
+	
+	System.out.print("Enter a year: ");
+	int year = input.nextInt();
+	
+	//int dayInMonth; Why doesn't this work?????????/
+	if (month == 1) {
+		monthName = "January";
+		dayInMonth = 31;
+	}
+	if (month == 2) {
+		monthName = "February";
+		if (year % 4 == 0)
+			dayInMonth = 29;
+		else
+			dayInMonth = 28;
+	}
+	if (month == 3) {
+		monthName = "March";
+		dayInMonth = 31;
+	}
+	if (month == 4) {
+		monthName = "April";
+		dayInMonth = 30;
+	}
+	if (month == 5) {
+		monthName = "May";
+		dayInMonth = 31;
+	}
+	if (month == 6) {
+		monthName = "June";
+		dayInMonth = 30;
+	}
+	if (month == 7) {
+		monthName = "July";
+		dayInMonth = 31;
+	}
+	if (month == 8) {
+		monthName = "August";
+		dayInMonth = 31;
+	}
+	if (month == 9) {
+		monthName = "September";
+		dayInMonth = 30;
+	}
+	if (month == 10) {
+		monthName = "October";
+		dayInMonth = 31;
+	}
+	
+	if (month == 11) {
+		monthName = "November";
+		dayInMonth = 30;
+	}
+	if (month == 12) {
+		monthName = "December";
+		dayInMonth = 31;
+	}
+
+	System.out.println(monthName + " " + year + " has " + dayInMonth + " days");
+}
+}
